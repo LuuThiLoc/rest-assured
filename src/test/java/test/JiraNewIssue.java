@@ -1,9 +1,8 @@
 package test;
 
-import com.google.gson.Gson;
+import builder.IssueContentBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import model.IssueFields;
 import model.RequestCapability;
 import utils.AuthenticationHandler;
 import utils.ProjectInfo;
@@ -16,7 +15,7 @@ public class JiraNewIssue implements RequestCapability {
 
         // Api info
         String baseUri = "https://sdetpro-tutorial.atlassian.net";
-        String projectKey = "SDETPRO";
+        String projectKey = "SDETPRO1";
         String email = System.getenv("email");
         String apiToken = System.getenv("token");
         String encodedCredStr = AuthenticationHandler.encodedCredStr(email, apiToken);
@@ -30,28 +29,13 @@ public class JiraNewIssue implements RequestCapability {
         request.header(getAuthenticatedHeader.apply(encodedCredStr));
 
         // Define body data
-//        String fieldsStr = "{\n" +
-//                "  \"fields\": {\n" +
-//                "    \"summary\": \"Summary | From Jira API\",\n" +
-//                "    \"project\": {\n" +
-//                "      \"key\": \"SDETPRO\"\n" +
-//                "    },\n" +
-//                "    \"issuetype\": {\n" +
-//                "      \"id\": \"10001\"\n" +
-//                "    }\n" +
-//                "  }\n" +
-//                "}";
-
-        String summary = "This is my summary";
+        String summary = "Summary | IssueContentBuilder";
         ProjectInfo projectInfo = new ProjectInfo(baseUri, projectKey);
         String taskTypeId = projectInfo.getIssueTypeId("task");
-        IssueFields.IssueType issueType = new IssueFields.IssueType(taskTypeId);
-        IssueFields.Project project = new IssueFields.Project(projectKey);
-        IssueFields.Fields fields = new IssueFields.Fields(summary, project, issueType);
-        IssueFields issueFields = new IssueFields(fields);
+        String issueFieldsContent = IssueContentBuilder.build(projectKey, taskTypeId, summary);
 
         // Send request
-        Response response = request.body(new Gson().toJson(issueFields)).post(path);
+        Response response = request.body(issueFieldsContent).post(path);
         response.prettyPrint();
     }
 }
