@@ -1,6 +1,11 @@
 {
-  "userId": 1,
-  "id": 1,
-  "title": "The req's title",
-  "body": "The req's body"
+  "fields": {
+    "summary": "Summary | From Jira API",
+    "project": {
+      "key": "SDETPRO"
+    },
+    "issuetype": {
+      "id": "10001"
+    }
+  }
 }

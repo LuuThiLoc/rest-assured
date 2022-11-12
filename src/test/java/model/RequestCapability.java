@@ -8,6 +8,7 @@ public interface RequestCapability {
 
     // public static by default: nen ko can ghi
     Header defautHeader = new Header("Content-type", "application/json; charset=UTF-8");
+    Header acceptJSONHeader = new Header("Accept", "application/json");
 
     // Handle input value is null (empty, length...)
     static Header getAuthenticatedHeader(String encodedCredStr){

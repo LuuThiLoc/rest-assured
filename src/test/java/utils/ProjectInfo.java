@@ -4,7 +4,6 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import model.RequestCapability;
-import org.apache.commons.codec.binary.Base64;
 
 import java.util.List;
 import java.util.Map;
@@ -53,18 +52,13 @@ public class ProjectInfo implements RequestCapability {
         String path = "/rest/api/3/project/".concat(projectKey);
 
 //        Set environment variables such as email, apiToken in Configuration | Set directly
-//        String email = "lhtk7pc@gmail.com";
-//        String apiToken = "u8AnBOdhzlqkxS03AX2e3CD6";
         String email = System.getenv("email");
         String apiToken = System.getenv("token");
-        String cred = email.concat(":").concat(apiToken);
-        byte[] encodedCred = Base64.encodeBase64(cred.getBytes());
-        String encodedCredStr = new String(encodedCred);
 
         RequestSpecification request = given();
         request.baseUri(baseUri);
         request.header(defautHeader);
-        request.header(getAuthenticatedHeader.apply(encodedCredStr));
+        request.header(getAuthenticatedHeader.apply(AuthenticationHandler.encodedCredStr(email,apiToken)));
 
         Response response = request.get(path);
         projectInfo = JsonPath.from(response.asString()).get();
