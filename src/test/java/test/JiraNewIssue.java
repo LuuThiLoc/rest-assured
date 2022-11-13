@@ -10,7 +10,9 @@ import org.apache.commons.lang3.RandomStringUtils;
 import utils.AuthenticationHandler;
 import utils.ProjectInfo;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
 
 import static io.restassured.RestAssured.given;
 
@@ -54,14 +56,6 @@ public class JiraNewIssue implements RequestCapability {
         // Khi verify thì chỉ cần: Summary + Status của IssueType đc tạo ra trên JIRA "To Do"
         // response.prettyPrint();
 
-        // Check created task details
-        Map<String, String> responseBody = JsonPath.from(response.asString()).get();
-        String getIssuePath = "/rest/api/3/issue/" + responseBody.get("key");
-
-        // READ CREATED JIRA TASK INFO
-        response = request.get(getIssuePath);
-
-        // VERIFY
         IssueFields issueFields = issueContentBuilder.getIssueFields();  // Hoặc sử dụng: issueFields.toString();
         System.out.println(issueFields.getFields().getSummary());
         System.out.println(issueFields.getFields().getProject().getKey());
@@ -70,16 +64,58 @@ public class JiraNewIssue implements RequestCapability {
         String expectedSummary = issueFields.getFields().getSummary();
         String expectedStatus = "To Do";
 
-        Map<String, Object> fields = JsonPath.from(response.getBody().asString()).get("fields");
-        String actualSummary = fields.get("summary").toString();
-        Map<String, Object> status = (Map<String, Object>) fields.get("status");
-        Map<String, Object> statusCategory = (Map<String, Object>) status.get("statusCategory");
-        String actualStatus = statusCategory.get("name").toString();
+        // Check created task details
+        Map<String, String> responseBody = JsonPath.from(response.asString()).get();
+        final String CREATED_ISSUE_KEY = responseBody.get("key");
+
+        // VERIFY
+        // Functional Interface
+        Function<String, Map<String, String>> getIssueInfo = issueKey -> {
+            String getIssuePath = "/rest/api/3/issue/" + issueKey;
+
+            // READ CREATED JIRA TASK INFO
+            Response response_ = request.get(getIssuePath);
+
+            Map<String, Object> fields = JsonPath.from(response_.getBody().asString()).get("fields");
+            String actualSummary = fields.get("summary").toString();
+            Map<String, Object> status = (Map<String, Object>) fields.get("status");
+            Map<String, Object> statusCategory = (Map<String, Object>) status.get("statusCategory");
+            String actualStatus = statusCategory.get("name").toString();
+
+            Map<String, String> issueInfo = new HashMap<>();
+            issueInfo.put("summary", actualSummary);
+            issueInfo.put("status", actualStatus);
+            return issueInfo;
+        };
+
+        Map<String, String> issueInfo = getIssueInfo.apply(CREATED_ISSUE_KEY);
 
         System.out.println("expectedSummary: " + expectedSummary);
-        System.out.println("actualSummary: " + actualSummary);
+        System.out.println("actualSummary: " + issueInfo.get("summary"));
 
         System.out.println("expectedStatus: " + expectedStatus);
-        System.out.println("actualStatus: " + actualStatus);
+        System.out.println("actualStatus: " + issueInfo.get("status"));
+
+        // UPDATE CREATED JIRA TASK
+        // 1 - Get all JIRA Id transitions
+
+        // GET /rest/api/3/issue/{issueIdOrKey}/transitions
+        String getIssueTransitions = "/rest/api/3/issue/" + CREATED_ISSUE_KEY + "/transitions";
+        request.get(getIssueTransitions);
+
+        // Change status To Do -> Done
+        final String DONE_STATUS_ID = "41";
+        String transitionId = "{\n" +
+                "  \"transition\": {\n" +
+                "    \"id\": \"41\"\n" +
+                "  }\n" +
+                "}";
+
+        request.body(transitionId).post(getIssueTransitions).then().statusCode(204);
+
+        // Re-use Functional Interface
+        issueInfo = getIssueInfo.apply(CREATED_ISSUE_KEY);
+        String latestIssueStatus = issueInfo.get("status");
+        System.out.println("latestIssueStatus: "+ latestIssueStatus);
     }
 }

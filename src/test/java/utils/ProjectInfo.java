@@ -42,6 +42,8 @@ public class ProjectInfo implements RequestCapability {
         return issueTypeId;
     }
 
+    // TODO: getTransitionTypeId(){} // same as: getIssueTypeId()  // transitionType --> Id
+
     // Support method - private: update value for issueTypes
     private void getIssueTypes() {
         issueTypes = projectInfo.get("issueTypes");

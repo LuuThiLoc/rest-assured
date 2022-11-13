@@ -1,11 +1,5 @@
 {
-  "fields": {
-    "summary": "Summary | From Jira API",
-    "project": {
-      "key": "SDETPRO"
-    },
-    "issuetype": {
-      "id": "10001"
-    }
+  "transition": {
+    "id": "41"
   }
 }
