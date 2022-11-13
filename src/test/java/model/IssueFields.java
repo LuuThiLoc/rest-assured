@@ -1,7 +1,5 @@
 package model;
 
-import com.google.gson.Gson;
-
 public class IssueFields {
     private Fields fields;
 
@@ -32,7 +30,7 @@ public class IssueFields {
             return project;
         }
 
-        public IssueType getIssuetype() {
+        public IssueType getIssueType() {
             return issuetype;
         }
     }
