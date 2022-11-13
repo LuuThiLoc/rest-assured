@@ -53,17 +53,12 @@ public class ProjectInfo implements RequestCapability {
     private void getProjectInfo() {
         String path = "/rest/api/3/project/".concat(projectKey);
 
-//        Set environment variables such as email, apiToken in Configuration | Set directly
-        String email = System.getenv("email");
-        String apiToken = System.getenv("token");
-
         RequestSpecification request = given();
         request.baseUri(baseUri);
         request.header(defautHeader);
-        request.header(getAuthenticatedHeader.apply(AuthenticationHandler.encodedCredStr(email,apiToken)));
+        request.header(getAuthenticatedHeader.apply(AuthenticationHandler.encodedCredStr(email,token)));
 
         Response response = request.get(path);
         projectInfo = JsonPath.from(response.asString()).get();
-//        response.prettyPrint();  // always print response
     }
 }

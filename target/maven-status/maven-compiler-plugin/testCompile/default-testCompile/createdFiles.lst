@@ -1,8 +1,10 @@
 test\POSTMethodBk.class
 utils\AuthenticationHandler.class
 builder\IssueContentBuilder.class
+api_flow\IssueFlow.class
 utils\ProjectInfo.class
 model\IssueFields$Fields.class
+model\IssueTransition$Transition.class
 test\POSTMethod.class
 model\RequestCapability.class
 builder\BodyJSONBuilder.class
@@ -11,8 +13,9 @@ model\IssueFields.class
 test\JiraIssueTypes.class
 test\PUTMethod.class
 test\PATCHMethod.class
+test\JiraIssueCRUD.class
 model\BuildModelJSON.class
+model\IssueTransition.class
 model\IssueFields$IssueType.class
 test\GETMethod.class
-test\JiraNewIssue.class
 model\PostBody.class

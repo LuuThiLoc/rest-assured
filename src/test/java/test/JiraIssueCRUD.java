@@ -3,20 +3,20 @@ package test;
 import api_flow.IssueFlow;
 import io.restassured.specification.RequestSpecification;
 import model.RequestCapability;
+import org.testng.annotations.Test;
 import utils.AuthenticationHandler;
 
 import static io.restassured.RestAssured.given;
 
 public class JiraIssueCRUD implements RequestCapability {
 
-    public static void main(String[] args) {
+    @Test
+    public void testE2EFlow(){
 
         // Api info
         String baseUri = "https://sdetpro-tutorial.atlassian.net";
         String projectKey = "SDETPRO1";
-        String email = System.getenv("email");
-        String apiToken = System.getenv("token");
-        String encodedCredStr = AuthenticationHandler.encodedCredStr(email, apiToken);
+        String encodedCredStr = AuthenticationHandler.encodedCredStr(email, token);
 
         // Request Object
         RequestSpecification request = given();
