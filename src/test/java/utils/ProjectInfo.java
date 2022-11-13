@@ -64,6 +64,6 @@ public class ProjectInfo implements RequestCapability {
 
         Response response = request.get(path);
         projectInfo = JsonPath.from(response.asString()).get();
-        response.prettyPrint();
+//        response.prettyPrint();  // always print response
     }
 }

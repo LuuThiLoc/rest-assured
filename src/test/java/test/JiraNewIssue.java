@@ -11,6 +11,7 @@ import utils.AuthenticationHandler;
 import utils.ProjectInfo;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -48,7 +49,7 @@ public class JiraNewIssue implements RequestCapability {
         // input đầu vào của issueFields gồm (projectKey, taskTypeId, randomSummary)
         String issueFieldsContent = issueContentBuilder.build(projectKey, taskTypeId, randomSummary);
 
-        // CREATE JIRA TASK
+        // 1 - CREATE JIRA TASK
         // Send 1 cái request lên để get issueFields này về
         Response response = request.body(issueFieldsContent).post(path);
 
@@ -73,7 +74,7 @@ public class JiraNewIssue implements RequestCapability {
         Function<String, Map<String, String>> getIssueInfo = issueKey -> {
             String getIssuePath = "/rest/api/3/issue/" + issueKey;
 
-            // READ CREATED JIRA TASK INFO
+            // 2 - READ CREATED JIRA TASK INFO
             Response response_ = request.get(getIssuePath);
 
             Map<String, Object> fields = JsonPath.from(response_.getBody().asString()).get("fields");
@@ -96,8 +97,8 @@ public class JiraNewIssue implements RequestCapability {
         System.out.println("expectedStatus: " + expectedStatus);
         System.out.println("actualStatus: " + issueInfo.get("status"));
 
-        // UPDATE CREATED JIRA TASK
-        // 1 - Get all JIRA Id transitions
+        // 3 - UPDATE CREATED JIRA TASK
+        // Get all JIRA Id transitions
 
         // GET /rest/api/3/issue/{issueIdOrKey}/transitions
         String getIssueTransitions = "/rest/api/3/issue/" + CREATED_ISSUE_KEY + "/transitions";
@@ -116,6 +117,18 @@ public class JiraNewIssue implements RequestCapability {
         // Re-use Functional Interface
         issueInfo = getIssueInfo.apply(CREATED_ISSUE_KEY);
         String latestIssueStatus = issueInfo.get("status");
-        System.out.println("latestIssueStatus: "+ latestIssueStatus);
+        System.out.println("latestIssueStatus: " + latestIssueStatus);
+
+        // 4 - DELETE CREATED JIRA TASK
+        // DELETE /rest/api/3/issue/{issueIdOrKey}
+        String deleteIssuePath = "/rest/api/3/issue/" + CREATED_ISSUE_KEY;
+        request.delete(deleteIssuePath).prettyPrint();
+
+        // Verify Issue is not existing
+        String getIssuePath = "/rest/api/3/issue/" + CREATED_ISSUE_KEY;
+        response = request.get(getIssuePath);
+        Map<String, List<String>> notExistingIssueRes = JsonPath.from(response.body().asString()).get();
+        List<String> errorMessages = notExistingIssueRes.get("errorMessages");
+        System.out.println("Returned msg: " + errorMessages.get(0));
     }
 }
