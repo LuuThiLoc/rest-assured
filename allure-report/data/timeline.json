@@ -1,0 +1,81 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "VinhL",
+    "children" : [ {
+      "name" : "688@VinhL.main(1)",
+      "children" : [ {
+        "name" : "updateIssue",
+        "uid" : "8db4b1518ed2265",
+        "parentUid" : "daea7a0a9b7e300f00affe13269f7644",
+        "status" : "passed",
+        "time" : {
+          "start" : 1668436491408,
+          "stop" : 1668436495751,
+          "duration" : 4343
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createIssue",
+        "uid" : "81bb8c26b3a88ccc",
+        "parentUid" : "daea7a0a9b7e300f00affe13269f7644",
+        "status" : "passed",
+        "time" : {
+          "start" : 1668436466993,
+          "stop" : 1668436480884,
+          "duration" : 13891
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testE2EFlow",
+        "uid" : "94e30860026a7866",
+        "parentUid" : "daea7a0a9b7e300f00affe13269f7644",
+        "status" : "passed",
+        "time" : {
+          "start" : 1668436484213,
+          "stop" : 1668436491394,
+          "duration" : 7181
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "deleteIssue",
+        "uid" : "bf443278a093c451",
+        "parentUid" : "daea7a0a9b7e300f00affe13269f7644",
+        "status" : "passed",
+        "time" : {
+          "start" : 1668436481242,
+          "stop" : 1668436484186,
+          "duration" : 2944
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "daea7a0a9b7e300f00affe13269f7644"
+    } ],
+    "uid" : "a111a3a691278926def9cdb58116c87b"
+  } ]
+}

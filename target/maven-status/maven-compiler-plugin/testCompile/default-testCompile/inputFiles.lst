@@ -1,8 +1,10 @@
+E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\BaseTest.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\model\PostBody.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\PATCHMethod.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\JiraIssueCRUD.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\GETMethod.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\PUTMethod.java
+E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\TestNGHooks.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\test\POSTMethodBk.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\model\IssueFields.java
 E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\src\test\java\builder\BodyJSONBuilder.java

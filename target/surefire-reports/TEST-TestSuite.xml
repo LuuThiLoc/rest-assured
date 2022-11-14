@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="23.823" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="39.957" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\test-classes;E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\classes;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
+    <property name="java.class.path" value="E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\test-classes;E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\classes;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-java-commons\2.20.1\allure-java-commons-2.20.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-model\2.20.1\allure-model-2.20.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-rest-assured\2.18.1\allure-rest-assured-2.18.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-attachments\2.18.1\allure-attachments-2.18.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-testng\2.17.3\allure-testng-2.17.3.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-test-filter\2.17.3\allure-test-filter-2.17.3.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar;"/>
     <property name="xmlSuite" value="src/test/resources/test-suites/Regression"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
@@ -18,9 +18,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.11\bin"/>
-    <property name="sun.java.command" value="C:\Users\Luu Thieu Gia\AppData\Local\Temp\surefire9127551188447865513\surefirebooter17271944904579415611.jar C:\Users\Luu Thieu Gia\AppData\Local\Temp\surefire9127551188447865513 2022-11-13T23-30-11_532-jvmRun1 surefire3734110409175255412tmp surefire_07972821588106700320tmp"/>
+    <property name="sun.java.command" value="C:\Users\Luu Thieu Gia\AppData\Local\Temp\surefire10560304907709630697\surefirebooter18174036190833585513.jar C:\Users\Luu Thieu Gia\AppData\Local\Temp\surefire10560304907709630697 2022-11-14T21-34-13_374-jvmRun1 surefire17932686445454755937tmp surefire_08637223986515107147tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\test-classes;E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\classes;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
+    <property name="surefire.test.class.path" value="E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\test-classes;E:\01_LEARNING\SDET_PRO\SOURCE_CODE\restassured-tutorial\target\classes;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Luu Thieu Gia\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Luu Thieu Gia\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-java-commons\2.20.1\allure-java-commons-2.20.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-model\2.20.1\allure-model-2.20.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-rest-assured\2.18.1\allure-rest-assured-2.18.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-attachments\2.18.1\allure-attachments-2.18.1.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-testng\2.17.3\allure-testng-2.17.3.jar;C:\Users\Luu Thieu Gia\.m2\repository\io\qameta\allure\allure-test-filter\2.17.3\allure-test-filter-2.17.3.jar;C:\Users\Luu Thieu Gia\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Luu Thieu Gia"/>
     <property name="user.language" value="en"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Luu Thieu Gia\AppData\Local\Temp\surefire9127551188447865513\surefirebooter17271944904579415611.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Luu Thieu Gia\AppData\Local\Temp\surefire10560304907709630697\surefirebooter18174036190833585513.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.11+9-LTS-194"/>
@@ -61,26 +61,52 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testE2EFlow" classname="test.JiraIssueCRUD" time="21.096">
+  <testcase name="createIssue" classname="test.JiraIssueCRUD" time="14.492">
     <system-out><![CDATA[------>CREATE
 ------>READ
-expectedSummary: jrQ8QNv1w1X0kMzGbEG8
-actualSummary: jrQ8QNv1w1X0kMzGbEG8
+expectedSummary: lnGEk72torO0SKMY38A7
+actualSummary: lnGEk72torO0SKMY38A7
 expectedStatus: To Do
 actualStatus: To Do
------->UPDATE
-Actual Issue Status is updated: Done
-Expected Issue Status is updated: Done
-expectedSummary: jrQ8QNv1w1X0kMzGbEG8
-actualSummary: jrQ8QNv1w1X0kMzGbEG8
-expectedStatus: To Do
-actualStatus: Done
------->DELETE
-Returned msg: Issue does not exist or you do not have permission to see it.
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
+  </testcase>
+  <testcase name="deleteIssue" classname="test.JiraIssueCRUD" time="2.981">
+    <system-out><![CDATA[------>CREATE
+------>DELETE
+Returned msg: Issue does not exist or you do not have permission to see it.
+]]></system-out>
+  </testcase>
+  <testcase name="testE2EFlow" classname="test.JiraIssueCRUD" time="7.714">
+    <system-out><![CDATA[------>CREATE
+------>READ
+expectedSummary: EYC9KvXCpic4wRvPca7W
+actualSummary: EYC9KvXCpic4wRvPca7W
+expectedStatus: To Do
+actualStatus: To Do
+------>UPDATE
+Actual Issue Status is updated: In Progress
+Expected Issue Status is updated: In Progress
+expectedSummary: EYC9KvXCpic4wRvPca7W
+actualSummary: EYC9KvXCpic4wRvPca7W
+expectedStatus: To Do
+actualStatus: In Progress
+------>DELETE
+Returned msg: Issue does not exist or you do not have permission to see it.
+]]></system-out>
+  </testcase>
+  <testcase name="updateIssue" classname="test.JiraIssueCRUD" time="3.939">
+    <system-out><![CDATA[------>CREATE
+------>UPDATE
+Actual Issue Status is updated: In Progress
+Expected Issue Status is updated: In Progress
+expectedSummary: 5ANtHaeXgOBPvikcG32p
+actualSummary: 5ANtHaeXgOBPvikcG32p
+expectedStatus: To Do
+actualStatus: In Progress
+]]></system-out>
   </testcase>
 </testsuite>

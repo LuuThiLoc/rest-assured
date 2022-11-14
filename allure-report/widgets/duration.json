@@ -1,0 +1,41 @@
+[ {
+  "uid" : "94e30860026a7866",
+  "name" : "testE2EFlow",
+  "time" : {
+    "start" : 1668436484213,
+    "stop" : 1668436491394,
+    "duration" : 7181
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8db4b1518ed2265",
+  "name" : "updateIssue",
+  "time" : {
+    "start" : 1668436491408,
+    "stop" : 1668436495751,
+    "duration" : 4343
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "81bb8c26b3a88ccc",
+  "name" : "createIssue",
+  "time" : {
+    "start" : 1668436466993,
+    "stop" : 1668436480884,
+    "duration" : 13891
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf443278a093c451",
+  "name" : "deleteIssue",
+  "time" : {
+    "start" : 1668436481242,
+    "stop" : 1668436484186,
+    "duration" : 2944
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

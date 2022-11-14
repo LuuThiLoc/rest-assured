@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 public interface RequestCapability {
     String email = "lhtk7pc@gmail.com";
-    String token = "lTgyqas1IWWyXsxU6TvF91BB";
+    String token = "4CLfbiFXfmSxjr84q4QaF8D8";
 
     // public static by default: nen ko can ghi
     Header defautHeader = new Header("Content-type", "application/json; charset=UTF-8");

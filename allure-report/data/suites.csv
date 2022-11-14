@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Nov 14 21:34:44 ICT 2022","Mon Nov 14 21:34:51 ICT 2022","7181","Regression","Jira - IssueE2E","test.JiraIssueCRUD","test.JiraIssueCRUD","testE2EFlow","testE2EFlow",""
+"passed","Mon Nov 14 21:34:51 ICT 2022","Mon Nov 14 21:34:55 ICT 2022","4343","Regression","Jira - IssueE2E","test.JiraIssueCRUD","test.JiraIssueCRUD","updateIssue","updateIssue",""
+"passed","Mon Nov 14 21:34:26 ICT 2022","Mon Nov 14 21:34:40 ICT 2022","13891","Regression","Jira - IssueE2E","test.JiraIssueCRUD","test.JiraIssueCRUD","createIssue","createIssue",""
+"passed","Mon Nov 14 21:34:41 ICT 2022","Mon Nov 14 21:34:44 ICT 2022","2944","Regression","Jira - IssueE2E","test.JiraIssueCRUD","test.JiraIssueCRUD","deleteIssue","deleteIssue",""
