@@ -1,29 +1,12 @@
 package test;
 
 import api_flow.IssueFlow;
-import io.restassured.specification.RequestSpecification;
-import model.RequestCapability;
 import org.testng.annotations.Test;
-import utils.AuthenticationHandler;
 
-import static io.restassured.RestAssured.given;
-
-public class JiraIssueCRUD implements RequestCapability {
+public class JiraIssueCRUD extends BaseTest {
 
     @Test
-    public void testE2EFlow(){
-
-        // Api info
-        String baseUri = "https://sdetpro-tutorial.atlassian.net";
-        String projectKey = "SDETPRO1";
-        String encodedCredStr = AuthenticationHandler.encodedCredStr(email, token);
-
-        // Request Object
-        RequestSpecification request = given();
-        request.baseUri(baseUri);
-        request.header(defautHeader);
-        request.header(acceptJSONHeader);
-        request.header(getAuthenticatedHeader.apply(encodedCredStr));
+    public void testE2EFlow() {
 
         // CRUD
         IssueFlow issueFlow = new IssueFlow(baseUri, projectKey, request, "task");
@@ -35,9 +18,37 @@ public class JiraIssueCRUD implements RequestCapability {
         issueFlow.verifyIssueDetails();
 
         System.out.println("------>UPDATE");
-        issueFlow.updateIssue("Done");
+        issueFlow.updateIssue("In Progress");
         issueFlow.verifyIssueDetails();
 
+        System.out.println("------>DELETE");
+        issueFlow.deleteIssue();
+    }
+
+    @Test
+    public void createIssue() {
+        IssueFlow issueFlow = new IssueFlow(baseUri, projectKey, request, "task");
+        System.out.println("------>CREATE");
+        issueFlow.createIssue();
+        System.out.println("------>READ");
+        issueFlow.verifyIssueDetails();
+    }
+
+    @Test
+    public void updateIssue() {
+        IssueFlow issueFlow = new IssueFlow(baseUri, projectKey, request, "task");
+        System.out.println("------>CREATE");
+        issueFlow.createIssue();
+        System.out.println("------>UPDATE");
+        issueFlow.updateIssue("In Progress");
+        issueFlow.verifyIssueDetails();
+    }
+
+    @Test
+    public void deleteIssue() {
+        IssueFlow issueFlow = new IssueFlow(baseUri, projectKey, request, "task");
+        System.out.println("------>CREATE");
+        issueFlow.createIssue();
         System.out.println("------>DELETE");
         issueFlow.deleteIssue();
     }

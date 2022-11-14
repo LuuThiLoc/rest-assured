@@ -1,9 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Regression" >
-    <test name="Jira - IssueE2E" >
+    <test name="Jira - IssueE2E">
         <classes>
             <class name="test.JiraIssueCRUD" />
         </classes>
     </test>
+<!--    <test name="TestNGHooks" >-->
+<!--        <classes>-->
+<!--            <class name="test.TestNGHooks" />-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
